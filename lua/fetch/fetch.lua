@@ -156,8 +156,8 @@ local hostname = (function(s)local _=io.popen(s)local __=_:read('*all')_:close()
 got.username=got.username:gsub('^%s+',''):gsub('%s+$','')
 local memform = got.total_physical_memory:match('%S+$')
 
-got.total_physical_memory    = got.total_physical_memory     :gsub('(%d)\255(%d)','%1%2')
-got.available_physical_memory= got.available_physical_memory :gsub('(%d)\255(%d)','%1%2')
+got.total_physical_memory    = got.total_physical_memory     :gsub('(%d)[\255,](%d)','%1%2')
+got.available_physical_memory= got.available_physical_memory :gsub('(%d)[\255,](%d)','%1%2')
 --p(got.total_physical_memory:match('^%S+'),got.available_physical_memory:match('^%S+'),memform)
 
 -- //  Make cool thing to display to user
