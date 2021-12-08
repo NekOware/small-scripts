@@ -230,7 +230,7 @@ end
 
 local c=#disp
 disp[1] = ccol.edges..'┌─'..disp[1]:gsub('%s','─')..'─┐'..col.res
-disp[c] = ccol.edges..'└─'..disp[c]:gsub('%s','─')..'─\217'..col.res
+disp[c] = ccol.edges..'└─'..disp[c]:gsub('%s','─')..'─┘'..col.res
 
 -- //  Output details to user
 
