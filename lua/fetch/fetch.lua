@@ -169,6 +169,7 @@ local disp = {
 	'cpu ~ '..cpu,
 	'mem ~ '..tostring(tonumber(got.total_physical_memory:match('^%S+'))-tonumber(got.available_physical_memory:match('^%S+')))..memform..'/'..got.total_physical_memory:match('^%S+')..memform,
 	'kern ~ '..got.os_version:match('^%S+'),
+	'arch ~ '..( got.system_type:match('^[xX]%d+') or 'null' ),
 	'',
 	colbg.bred..'  '..colbg.byellow..'  '..colbg.bbgreen..'~ '..colbg.res..colbg.bcyan..'  '..colbg.bblue..'  '..colbg.bmagenta..'  '..colbg.black
 } -- The '~ ' in the last line is used to allign the colours with the details.
